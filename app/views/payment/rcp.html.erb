@@ -1,0 +1,504 @@
+<link href="/css/font-awesome.css" rel="stylesheet">
+<link href="/css/payment.css" rel="stylesheet" />
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/css/responsive.css" rel="stylesheet">
+<style type="text/css">
+  body {
+    background-color: #5bc0e0;
+  }
+	.popover{
+	    display:block !important;
+	    max-width: 400px!important;
+	    width:auto;
+	}
+	#footer {
+		margin-top: 10px;
+	  padding-top: 30px;
+	  padding-bottom: 30px;
+	  color: #fff;
+	  background: #5bc0de;
+	}
+
+	#footer a:hover {
+	    color: #a7e6a7;
+	    text-decoration: none;
+	}
+
+	#footer a {
+	    color: #fff;
+	}
+
+	#footer ul > li {
+	    display: inline-block;
+	    margin-left: 15px;
+	}
+	 /*************************
+  *******Header******
+  **************************/
+
+  #header .search{
+  display: inline-block;
+  }
+
+  .navbar>.container .navbar-brand{
+  margin-left: 0;
+  }
+
+  select {
+    color: black;
+  }
+
+  .marginBottom-0 {margin-bottom:0;}
+
+  .dropdown-submenu{position:relative;}
+  .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+  .dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+  .dropdown-submenu:hover>a:after{border-left-color:#555;}
+  .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+
+  #header > div > div > div > div.col-sm-6.col-xs-4 > div > span:nth-child(2) {
+  margin-left: 20%;
+  }
+
+  #navigation-top > div > div.collapse.navbar-collapse.navbar-right > ul > li.option::after {
+  content: "|";
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: larger;
+  color: #ccc;
+  }
+
+  .top-bar {
+  padding: 10px 15px;
+  background: #5bc0de;
+  border-bottom: 1px solid #5bc0de;
+  line-height: 28px;
+  font-size: initial;
+  }
+
+  .top-number{
+  color: #fff;
+  }
+
+  .top-number p{
+  margin: 0
+  }
+
+  .phone-number {
+  background: #eee;
+  border-color: #eee;
+  }
+
+  .phone-number:hover, .phone-number:active, .phone-number:focus{
+  background: #eee !important;
+  border-color: #eee !important;
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  cursor: auto !important;
+  }
+
+  .social{
+  text-align: right;
+  }
+
+  .social-share{
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  }
+
+  ul.social-share li {
+  display: inline-block;
+  }
+
+  ul.social-share li a {
+  display: inline-block;
+  color: #fff;
+  background: #5bc0de;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 2px;
+  }
+
+  ul.social-share li a:hover {
+  background: #fff;
+  color: #5bc0de;
+  }
+
+  .search i {
+  color: #fff;
+  }
+
+  input.search-form{
+  background: transparent;
+  border: 0 none;
+  width: 60px;
+  padding: 0 10px;
+  color: #FFF;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+  }
+
+  input.search-form::-webkit-input-placeholder{
+  color: transparent;
+  }
+
+  input.search-form:hover::-webkit-input-placeholder {
+  color: #fff;
+  }
+
+  input.search-form:hover {
+  width: 180px;
+  }
+
+  .navbar-brand {
+  padding: 0;
+  margin:0;
+  }
+
+  .navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  background: #eeeeee;
+  padding: 15px 0;
+  padding-bottom: 0;
+  }
+
+  header nav {
+  z-index: 1;
+  }
+
+  #navigation-top {
+  box-shadow: 4px 5px 4px rgba(85, 94, 97, 0.21);
+  }
+
+
+  .carousel-inner {
+  height: 520px;
+  }
+
+  .carousel-inner>div {
+  -webkit-box-shadow: inset 1px 7px 20px -6px;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    inset 1px 7px 20px -6px;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         inset 1px 7px 20px -6px;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+
+  #feature {
+  -webkit-box-shadow: inset 1px 2px 20px -6px;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    inset 1px 2px 20px -6px;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         inset 1px 2px 20px -6px;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+
+  #feature h3 {
+  text-overflow: ellipsis;
+  }
+
+  .navbar-nav{
+  margin-top: 12px;
+  }
+
+  .navbar-nav>li{
+  margin-left: 10px;
+  padding-bottom: 28px;
+  }
+
+  .navbar-inverse .navbar-nav > li > a {
+  padding: 5px 12px;
+  margin: 0;
+  border-radius: 3px;
+  color: #000;
+  line-height: 24px;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  }
+
+  .navbar-inverse .navbar-nav > li > a:hover{
+  background-color: #eeeeee;
+  color: #5cb85c;
+  }
+
+  .navbar-inverse {
+  border: none;
+  }
+
+  .navbar-inverse .navbar-brand {
+  font-size: 36px;
+  line-height: 50px;
+  color: #fff;
+  }
+
+  .navbar-inverse .navbar-nav > .active > a,
+  .navbar-inverse .navbar-nav > .active > a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus,
+  .navbar-inverse .navbar-nav > .open > a,
+  .navbar-inverse .navbar-nav > .open > a:hover,
+  .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #eeeeee;
+  color: #27a66d;
+  }
+
+  .navbar-inverse .navbar-nav .dropdown-menu {
+  background-color: rgba(92, 184, 92, 0.74);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  border-top: 0;
+  border-radius: 0;
+  left: 0;
+  }
+
+  .navbar-inverse .navbar-nav .dropdown-menu:before{
+  position: absolute;
+  top:0;
+  }
+
+  .navbar-inverse .navbar-nav .dropdown-menu > li > a {
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 15px;
+  }
+
+  .navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
+  .navbar-inverse .navbar-nav .dropdown-menu > li:focus > a,
+  .navbar-inverse .navbar-nav .dropdown-menu > li.active > a {
+  background-color: #c52d2f;
+  color: #fff;
+  }
+
+  .navbar-inverse .navbar-nav .dropdown-menu > li:last-child > a {
+  border-radius: 0 0 3px 3px;
+  }
+
+  .navbar-inverse .navbar-nav .dropdown-menu > li.divider {
+  background-color: transparent;
+  }
+
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-form {
+  border-top: 0;
+  padding-bottom: 0;
+  }
+  #header .fa {
+    color: white !important;
+  }
+
+</style>
+<div class="container">
+	<div class="step" id="step4">
+		<div class="title">
+			<h1>Pago</h1>
+		</div>
+	</div>
+	<div class="content">
+		<div class="alert alert-info">
+            <div class="form">
+                <p class="control-label">
+                   Medio de pago
+               </p>
+                <label class="pagoradio">
+                    <input value="1" type="radio" name="pago">&nbsp;PAT - Pago automático con cargo en tarjeta de crédito
+                </label>
+                <label class="pagoradio">
+                    <input value="2" type="radio" name="pago">&nbsp;PAC Electrónico - Pago automático con cargo en cuenta corriente (requiere inscripción electrónica en el sitio web del banco)
+                </label>
+                <label class="pagoradio">
+                    <input value="3" type="radio" name="pago">&nbsp;Webpay - Pago anual a través de Webpay Plus
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+        </div>
+        <div class="col-xs-10 col-sm-6 col-md-6 pagor1">
+			<br>
+			<label>Banco</label>
+			<select class="form-control">
+				<option disabled="" value=""></option>
+				<option value="1">ABN Amro Bank</option>
+				<option value="2">Banco Bice</option>
+				<option value="3">BBVA</option>
+				<option value="4">BCI</option>
+				<option value="5">Banco de Chile</option>
+				<option value="6">Banco de la Nación Argentina</option>
+				<option value="7">Banco Desarrollo</option>
+				<option value="8">BancoEstado</option>
+				<option value="9">Banco do Brasil</option>
+				<option value="10">Banco Falabella</option>
+				<option value="11">Banco Internacional</option>
+				<option value="12">Banco Itaú</option>
+				<option value="13">Banco Monex</option>
+				<option value="14">Banco París</option>
+				<option value="15">Banco Penta</option>
+				<option value="16">Banco Ripley</option>
+				<option value="17">Banco Santander</option>
+				<option value="18">Banco Security</option>
+				<option value="19">Bank of Tokyo-Mitsubishi</option>
+				<option value="20">Banco Edwards Citi</option>
+				<option value="21">Corpbanca</option>
+				<option value="22">Deutsche Bank</option>
+				<option value="23">HNS Banco</option>
+				<option value="24">HSBC Bank</option>
+				<option value="25">JP Morgan Chase Bank</option>
+				<option value="26">Scotiabank Sud Americano</option>
+			</select>
+		</div>
+		<div class="col-xs-10 col-sm-6 col-md-6 pagor1">
+			<br>
+            <label>CARD NUMBER</label>
+            <div class="input-group" style="margin-top: 0px;">
+                <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number" required="">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            </div>
+		</div>
+		<div class="col-xs-10 col-sm-6 col-md-6 pagor1 pagor2">
+			<br>
+			<label>Fecha de vencimiento</label>
+			<div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px;padding-left: 0px!important">
+				<select class="form-control">
+					<option disabled="" value="">Mes</option>
+					<option value="1">01</option>
+					<option value="2">02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">07</option>
+					<option value="8">08</option>
+					<option value="9">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px;padding-left: 0px!important">
+				<select class="form-control">
+					<option disabled="" value="">Año</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+					<option value="2022">2022</option>
+					<option value="2023">2023</option>
+					<option value="2024">2024</option>
+					<option value="2025">2025</option>
+					<option value="2026">2026</option>
+					<option value="2027">2027</option>
+					<option value="2028">2028</option>
+					<option value="2029">2029</option>
+					<option value="2030">2030</option>
+					<option value="2031">2031</option>
+					<option value="2032">2032</option>
+					<option value="2033">2033</option>
+					<option value="2034">2034</option>
+					<option value="2035">2035</option>
+					<option value="2036">2036</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-10 col-sm-6 col-md-6 pagor1">
+			<br>
+			<div div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px !important;padding-left: 0px!important">
+				<label>Cuotas</label>
+				<div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 0px !important;padding-left: 0px!important">
+					<select class="form-control">
+						<option disabled="" value=""></option>
+						<option value="1">01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+						<option value="4">04</option>
+						<option value="5">05</option>
+						<option value="6">06</option>
+						<option value="7">07</option>
+						<option value="8">08</option>
+						<option value="9">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+				</div>
+			</div>
+			<div div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px !important;padding-left: 0px !important;">
+				<label>Día de pago</label>
+				<div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 0px !important;padding-left: 0px!important">
+					<select class="form-control">
+						<option disabled="" value=""></option>
+						<option value="15">15</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="alert alert-warning col-xs-12 vert-offset-top pagorr1" style="display: none">
+			<p class="control-label">
+		  El cargo de la primera cuota se realizará en tu tarjeta de crédito en un plazo máximo de 72 horas hábiles, luego de que te enviemos el certificado de póliza.
+			</p>
+		</div>
+
+		<div class="alert alert-warning col-xs-12 vert-offset-top pagorr2" style="display: none">
+			<p class="control-label">
+			Recuerda inscribir el pago de cuenta automático en tu banco, utilizando el siguiente ID de venta: 270630
+			<br>
+			<br>
+			<a href="#">¿Cómo inscribo el PAC electrónico?</a>
+			<br>
+			<br>
+			El primer cobro del seguro se realizará en un <strong>máximo de 72 horas hábiles</strong>, luego de que te enviemos el certificado de póliza
+			</p>
+		</div>
+
+		<div class="alert alert-warning col-xs-12 vert-offset-top pagorr3" style="display: none">
+			<p class="control-label">
+		  Una vez aprobada la inspección de tu vehículo, te enviaremos un correo con el link de pago que te llevará a Webpay. Desde este link existe la posibilidad de pagar en cuotas al seleccionar pago con tarjeta de crédito, o también podrás pagar el total del seguro utilizado Redcompra.
+			</p>
+		</div>
+    <br>
+	<form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Indique que ha leído y acepta los Términos y condiciones y la Política de privacidad'); return false; }">
+		<input type="checkbox" name="checkbox" style="margin-left: 20px;" value="check" id="agree" /> He leído y acepto los Términos y condiciones y la Política de privacidady
+		<input type="submit" class="continue" value="Pagar $6.698" />
+	</form>
+  </div>
+	<!-- <div class="col-md-8">
+		<input type="checkbox" name="check"style="margin-left: 20px;"><span for="check">&nbsp&nbspAceptar términos y condiciones</span>
+	</div>
+	<a class="continue" href="#">Continuar</a> -->
+</div>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+	$(".pagoradio input").on('change', function() {
+		if($(this).val() == 1) {
+			$('.pagor1').css('display', 'block');
+			$('.pagorr1').css('display', 'block');
+			$('.pagorr2').css('display', 'none');
+			$('.pagorr3').css('display', 'none');
+		} else if($(this).val() == 2){
+			$('.pagor1').css('display', 'block');
+			$('.pagor2').css('display', 'none');
+			$('.pagorr1').css('display', 'none');
+			$('.pagorr2').css('display', 'block');
+			$('.pagorr3').css('display', 'none');
+		} else {
+			$('.pagor1').css('display', 'none');
+			$('.pagor2').css('display', 'none');
+			$('.pagorr1').css('display', 'none');
+			$('.pagorr2').css('display', 'none');
+			$('.pagorr3').css('display', 'block');
+		}
+	});
+	$('.selectpicker').selectpicker();
+</script>

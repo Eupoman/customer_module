@@ -1,0 +1,156 @@
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/prettyPhoto.css" rel="stylesheet">
+<link href="/css/animate.min.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/responsive.css" rel="stylesheet">
+<style type="text/css">
+    body > div.container > div > article > div li{
+        list-style: none;
+    }
+    body > div.container > div > article > div ul{
+        padding-left: 10px;
+    }
+</style>
+<section id="contact-info">
+    <div class="center">                
+        <h2>¿Como contactarnos?</h2>
+    </div>
+    <div class="gmap-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 text-center">
+                    <div class="gmap">
+                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=Barcelona%20129%20La%20Florida%2C%20Santiago&key=AIzaSyBdQZGMqY71U8UZJbD4njv_IvrUyhQzaSA"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-sm-7 map-content" style="margin-top: 64px; font-size: medium;">
+                    <ul class="row">
+                        <li class="col-sm-12">
+                            <address>
+                                <h5>Oficina Central</h5>
+                                <p>Barcelona 129 <br>
+                                La Florida, Santiago</p>
+                                <p>Teléfono: +56997910096 <br>
+                                Correo: contacto@miespacioseguro.cl</p>
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  <!--/gmap_area -->
+
+<section id="contact-page">
+    <div class="container">
+        <div class="center">        
+            <h2>Escríbenos y te contactaremos</h2>
+            <p class="lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div> 
+        <div class="row contact-wrap"> 
+            <div class="status alert alert-success" style="display: none"></div>
+            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                <div class="col-sm-5 col-sm-offset-1">
+                    <div class="form-group">
+                        <label>Nombre *</label>
+                        <input type="text" name="name" class="form-control" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" class="form-control" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>Número de telefono</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre de Empresa</label>
+                        <input type="text" class="form-control">
+                    </div>                        
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label>Asunto *</label>
+                        <input type="text" name="subject" class="form-control" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje *</label>
+                        <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
+                    </div>                        
+                    <div class="form-group">
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Enviar mensaje</button>
+                    </div>
+                </div>
+            </form> 
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#contact-page-->
+<section id="bottom"> 
+    <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="widget">
+                    <h3>Compañia</h3>
+                    <ul>
+                        <li><a href="contact-us.html">Sobre EspacioSeguro</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Empresas</a></li>
+                        <li><a href="#">Seguros Empresas</a></li>
+                        <li><a href="#">Trabaja con Nosotros</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul>
+                </div>    
+            </div><!--/.col-md-4-->
+
+            <div class="col-md-4 col-sm-4">
+                <div class="widget">
+                    <h3>Nuestras Alianzas</h3>
+                    <ul>
+                        <li><a href="http://www.liberty.cl">Liberty</a></li>
+                        <li><a href="http://www.rentanacional.cl">National income</a></li>
+                        <li><a href="http://www.mapfre.cl">Mapfre Seguros</a></li>
+                        <li><a href="http://www.bciseguros.cl">BCI Seguros</a></li>
+                        <li><a href="http://www.hdi.cl">HDI Seguros</a></li>
+                    </ul>
+                </div>    
+            </div><!--/.col-md-4-->
+
+            <div class="col-md-4 col-sm-4">
+                <div class="widget">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="http://www.svs.cl/portal/principal/605/w3-channel.html">Superintendencia de valores y seguros</a></li>
+                        <li><a href="#">Contratación Voluntaria</a></li>
+                        <li><a href="http://www.ddachile.cl/v5/Inicio.aspx ">Defensor del Asegurado</a></li>
+                    </ul>
+                </div>    
+            </div><!--/.col-md-4-->
+
+        </div>
+    </div>
+</section><!--/#bottom-->
+<script src="/js/jquery.js"></script>
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.prettyPhoto.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/cleave.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/validator.js"></script>
+<script src="/js/functions.js"></script>
+<script src="/libs/no-ui-slider/jquery.nouislider.all.min.js"></script>
+<script src="/libs/parallax.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script src="/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="/libs/inputautocomplete/jquery.easy-autocomplete.min.js"></script>
+<script type="text/javascript" src="/js/validate/jquery.validate.min.js"></script>
+<!-- <script src="/js/main.js"></script> -->
+</script>
+<script type="text/javascript">
+    $('.selectpicker').selectpicker();
+</script>

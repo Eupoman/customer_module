@@ -1,0 +1,136 @@
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Signika:300,400,600,700" />
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
+<style type="text/css">
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        padding-left: 10px;
+        background-color: #5cb85c;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content li {
+        list-style: none;
+    }
+
+    .dropdown-content a:hover {
+        color: black;
+    }
+
+    .drop-broker:hover .dropdown-content {
+        display: block;
+    }
+
+</style>
+<header id="header">
+      <div class="top-bar ">
+            <div class="container" style="width:100% !important;">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-5">
+                        <div class="top-number">
+                            <span><i class="fa fa-phone-square"></i>  +5694 233 2502&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                            <span id="open_chat"><i class="fa fa-comments-o"></i>chat en línea</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-7">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                            <div class="search">
+                                <form role="form">
+                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                    <i class="fa fa-search"></i>
+                                </form>
+                           </div>
+
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" id="navigation-top" role="banner">
+            <div class="container" style="width: 100% !important;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<%= url_for :controller => 'main', :action => 'index' %>"><img src="/images/logHR.png" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav" role="menu" aria-labelledby="dropdownMenu">
+                        <li class="<%= 'active' if is_active_controller('main')&&is_active_action('index') %> option"><a href="<%= url_for :controller => 'main', :action => 'index' %>">Inicio</a></li>
+                        <!-- <li><a href="about-us.html">About Us</a></li> -->
+                        <li class="option" ><a href="#">Sobre Espacio Seguro</a></li>
+                        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                        <li class="option" ><a href="#feature">Servicios</a></li>
+                        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                        <li class="option dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Empresas<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<%= url_for :controller => 'main', :action => 'aboutus' %>">Seguros Empresas</a></li>
+                                <li><a href="http://54.94.137.231:3005/workus/login">Trabaja con Nosotros</a></li>
+                            </ul>
+                        </li>
+                        <li class="<%= 'active' if is_active_controller('main')&&is_active_action('contactus') %>"><a href="<%= url_for :controller => 'main', :action => 'contactus' %>">Contáctanos</a></li>
+                        <!-- <li><a href="contact-us.html">Contact</a></li>     -->
+                        <li>
+                            <button type="button" class="btn btn-info" onclick="gotoCustomer()" >
+                                <span class="ladda-label"><i class="fa fa-users"></i>&nbsp&nbsp&nbspClientes en Línea</span>
+                            </button>
+                        </li>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="ladda-label"><i class="fa fa-building-o"></i>&nbsp&nbsp&nbspOficina Virtual</span>
+                            </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://54.94.137.231:3005/">Ejecutivo</a></li>
+                                    <li><a href="http://54.94.137.231:3005/user/autologin">Automotor</a></li>
+                                    <li class="dropdown-submenu drop-broker">
+                                        <a class="test" href="#">Corredor</span></a>
+                                        <ul class="dropdown-content">
+                                          <li><a href="http://54.94.137.231:3005/user/login2">Portal Corredores</a></li>
+                                          <li><a href="http://54.94.137.231:3005/">Acceso Brokernet</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+
+    </header><!--/header-->
+
+    <script type="text/javascript">
+       function gotoCustomer() {
+           // body...
+           window.location.href = '/oncustomer/index';
+       }
+    </script>

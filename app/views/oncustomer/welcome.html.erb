@@ -1,0 +1,819 @@
+<link rel="stylesheet" href="/css/font-awesome.css"></link>
+<link rel="stylesheet" href="/css/bootstrap.min.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/dataTables/datatables.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style type="text/css">
+	
+	body { 
+		background-color: #f9f9f9;
+	 }
+
+	 .jumbotron {
+	 	background-image: url(/images/onlinecustomer.jpg);
+	 	height: 800px;
+	 }
+	#flipkart-navbar {
+	    background-color: #eee;
+	    color: #FFFFFF;
+	    -webkit-box-shadow: 0 8px 6px -6px #999;
+	    -moz-box-shadow: 0 8px 6px -6px #999;
+	    box-shadow: 0 8px 6px -6px #999;
+	}
+
+	.row1 {
+	    padding-top: 10px;
+	    background-color: #24bad9;
+	}
+
+	.row1 ul a{
+		font-size: 16px;
+	}
+
+	.row2 {
+	    padding-bottom: 10px;
+    	padding-top: 5px;
+	}
+
+	.flipkart-navbar-input {
+	    padding: 11px 16px;
+	    border-radius: 2px 0 0 2px;
+	    border: 0 none;
+	    outline: 0 none;
+	    font-size: 15px;
+	}
+
+	.flipkart-navbar-button {
+	    background-color: #ffe11b;
+	    border: 1px solid #ffe11b;
+	    border-radius: 0 2px 2px 0;
+	    color: #565656;
+	    padding: 10px 0;
+	    height: 43px;
+	    cursor: pointer;
+	}
+
+	.cart-button {
+	    background-color: #24bad9;
+	    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
+	    padding: 10px 0;
+	    text-align: center;
+	    height: 41px;
+	    border-radius: 2px;
+	    font-weight: 500;
+	    width: 120px;
+	    display: inline-block;
+	    color: #FFFFFF;
+	    text-decoration: none;
+	    color: inherit;
+	    border: none;
+	    outline: none;
+	}
+
+	.cart-button:hover{
+	    text-decoration: none;
+	    color: #fff;
+	    cursor: pointer;
+	}
+
+	.cart-svg {
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	    vertical-align: middle;
+	    margin-right: 8px;
+	}
+
+	.item-number {
+	    border-radius: 3px;
+	    background-color: rgba(0, 0, 0, .1);
+	    height: 20px;
+	    padding: 3px 6px;
+	    font-weight: 500;
+	    display: inline-block;
+	    color: #fff;
+	    line-height: 12px;
+	    margin-left: 10px;
+	}
+
+	.upper-links {
+	    display: inline-block;
+	    padding: 0 11px;
+	    line-height: 23px;
+	    font-family: 'Roboto', sans-serif;
+	    letter-spacing: 0;
+	    color: inherit;
+	    border: none;
+	    outline: none;
+	    font-size: 12px;
+	}
+
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	    margin-bottom: 0px;
+	}
+
+	.dropdown:hover {
+	    background-color: #fff;
+	}
+
+	.dropdown:hover .links {
+	    color: #000;
+	}
+
+	.dropdown:hover .dropdown-menu {
+	    display: block;
+	}
+
+	.dropdown .dropdown-menu {
+	    position: absolute;
+	    top: 100%;
+	    display: none;
+	    background-color: #fff;
+	    color: #333;
+	    left: 0px;
+	    border: 0;
+	    border-radius: 0;
+	    box-shadow: 0 4px 8px -3px #555454;
+	    margin: 0;
+	    padding: 0px;
+	}
+
+	.links {
+	    color: #fff;
+	    text-decoration: none;
+	}
+
+	.links:hover {
+	    color: #ffe11b;
+	    text-decoration: none;
+	}
+
+	.profile-links {
+	    font-size: 12px;
+	    font-family: 'Roboto', sans-serif;
+	    border-bottom: 1px solid #e9e9e9;
+	    box-sizing: border-box;
+	    display: block;
+	    padding: 0 11px;
+	    line-height: 23px;
+	}
+
+	.profile-li{
+	    padding-top: 2px;
+	}
+
+	.largenav {
+	    display: none;
+	}
+
+	.smallnav{
+	    display: block;
+	}
+
+	.smallsearch{
+	    margin-left: 15px;
+	    margin-top: 15px;
+	}
+
+	.menu{
+	    cursor: pointer;
+	}
+
+	@media screen and (min-width: 768px) {
+	    .largenav {
+	        display: block;
+	    }
+	    .smallnav{
+	        display: none;
+	    }
+	    .smallsearch{
+	        margin: 0px;
+	    }
+	}
+
+	/*Sidenav*/
+	.sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: #fff;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    box-shadow: 0 4px 8px -3px #555454;
+	    padding-top: 0px;
+	}
+
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    display: block;
+	    transition: 0.3s
+	}
+
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	    color: #fff;        
+	}
+
+	@media screen and (max-height: 450px) {
+	  .sidenav a {font-size: 18px;}
+	}
+
+	.sidenav-heading{
+	    font-size: 36px;
+	    color: #fff;
+	}
+
+	/*	--------------------------------------------------
+	:: Table Filter
+	-------------------------------------------------- */
+	.panel {
+		border: 1px solid #ddd;
+		background-color: #fcfcfc;
+	}
+	.panel .btn-group {
+		margin: 15px 0 30px;
+	}
+	.panel .btn-group .btn {
+		transition: background-color .3s ease;
+	}
+	.table-filter {
+		background-color: #fff;
+		border-bottom: 1px solid #eee;
+	}
+	.table-filter tbody tr:hover {
+		cursor: pointer;
+		background-color: #eee;
+	}
+	.table-filter tbody tr td {
+		padding: 10px;
+		vertical-align: middle;
+		border-top-color: #eee;
+	}
+	.table-filter tbody tr.selected td {
+		background-color: #eee;
+	}
+	.table-filter tr td:first-child {
+		width: 38px;
+	}
+	.table-filter tr td:nth-child(2) {
+		width: 35px;
+	}
+	.ckbox {
+		position: relative;
+	}
+	.ckbox input[type="checkbox"] {
+		opacity: 0;
+	}
+	.ckbox label {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.ckbox label:before {
+		content: '';
+		top: 1px;
+		left: 0;
+		width: 18px;
+		height: 18px;
+		display: block;
+		position: absolute;
+		border-radius: 2px;
+		border: 1px solid #bbb;
+		background-color: #fff;
+	}
+	.ckbox input[type="checkbox"]:checked + label:before {
+		border-color: #2BBCDE;
+		background-color: #2BBCDE;
+	}
+	.ckbox input[type="checkbox"]:checked + label:after {
+		top: 3px;
+		left: 3.5px;
+		content: '\e013';
+		color: #fff;
+		font-size: 11px;
+		font-family: 'Glyphicons Halflings';
+		position: absolute;
+	}
+	.table-filter .star {
+		color: #ccc;
+		text-align: center;
+		display: block;
+	}
+	.table-filter .star.star-checked {
+		color: #F0AD4E;
+	}
+	.table-filter .star:hover {
+		color: #ccc;
+	}
+	.table-filter .star.star-checked:hover {
+		color: #F0AD4E;
+	}
+	.table-filter .media-photo {
+		width: 35px;
+	}
+	.table-filter .media-body {
+	    display: block;
+	    /* Had to use this style to force the div to expand (wasn't necessary with my bootstrap version 3.3.6) */
+	}
+	.table-filter .media-meta {
+		font-size: 11px;
+		color: #999;
+	}
+	.table-filter .media .title {
+		color: #2BBCDE;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: normal;
+		margin: 0;
+	}
+	.table-filter .media .title span {
+		font-size: .8em;
+		margin-right: 20px;
+	}
+	.table-filter .media .title span.Auto {
+		color: #5cb85c;
+	}
+	.table-filter .media .title span.Viajar {
+		color: #f0ad4e;
+	}
+	.table-filter .media .title span.Casa {
+		color: #d9534f;
+	}
+	.table-filter .media .summary {
+		font-size: 14px;
+	}
+</style>
+<div id="flipkart-navbar">
+    <div class="container" style="width: 100%">
+        <div class="row row1">
+        	<div class="col-sm-11">
+	            <ul class="largenav pull-right" style="color: #fff;">
+	                <li class="upper-links myins"><a class="links" href="#"><i class="fa fa-shield"></i>&nbsp&nbspTus Seguros</a></li>
+	                <li class="upper-links myclaim"><a class="links" href="#"><i class="fa fa-file-o"></i>&nbsp&nbspInformación de Siniestros</li>
+	            </ul>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-sm-3 col-sm-offset-1">
+                <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ ES+</span></h2>
+                <h1 style="margin:0px;"><span class="largenav"><img src="/images/logo.png"></span></h1>
+            </div>
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="flipkart-navbar-search smallsearch col-sm-12 col-xs-11" style="margin-top: 10px;">
+	                <div class="row">
+	                    <input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search for Products, Brands and more" name="">
+	                    <button class="flipkart-navbar-button col-xs-1">
+	                        <svg width="15px" height="15px">
+	                            <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
+	                        </svg>
+	                    </button>
+	                </div>
+	            </div>
+            </div>
+            
+            <div class="cart largenav col-sm-2" style="margin-top: 10px">
+                <a class="cart-button" href="/oncustomer/index">
+                     <i class="fa fa-sign-out"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="width: 90%;">
+	<br>
+	<header class="jumbotron my-4">
+	    <h1 class="display-3" style="color: #a1dd95;">Bienvenido a tu Espacio Seguro</h1>
+	    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+	    <a href="#" class="btn btn-info btn-lg">Entrar!</a>
+	 </header>
+	<div class="row col-sm-12 myinsurance">
+
+		<section class="content">
+			<div class="col-md-12">
+				<h3>Tus Seguros</h3>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="pull-right">
+							<div class="btn-group">
+								<button type="button" class="btn btn-info btn-filter" data-target="Auto">Auto</button>
+								<button type="button" class="btn btn-info btn-filter" data-target="Viajar">Viajar</button>
+								<button type="button" class="btn btn-info btn-filter" data-target="Casa">Casa</button>
+								<button type="button" class="btn btn-info btn-filter" data-target="Rcp">RCP</button>
+								<button type="button" class="btn btn-info btn-filter" data-target="Soap">SOAP</button>
+								<button type="button" class="btn btn-info btn-filter" data-target="Vida">Vida</button>
+								<button type="button" class="btn btn-info btn-filter" data-target="Moto">Moto</button>
+								<button type="button" class="btn btn-info btn-filter" data-target="all">Todas</button>
+							</div>
+						</div>
+						<div class="table-container">
+							<table class="table table-filter">
+								<tbody>
+									<tr data-status="Auto">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														7425273-7
+														<span class="pull-right Auto">(Auto)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Viajar">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														17694763-2
+														<span class="pull-right Viajar">(Viajar)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Rcp">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														17694763-2
+														<span class="pull-right Rcp">(Rcp)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Moto">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														17694763-2
+														<span class="pull-right Moto">(Moto)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Vida">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														17694763-2
+														<span class="pull-right Viajar">(Vida)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Soap">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														7425273-7
+														<span class="pull-right Viajar">(Soap)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Casa">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														800340249-3
+														<span class="pull-right Casa">(Casa)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Auto" class="selected">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>	
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														800340249-3
+														<span class="pull-right Auto">(Auto)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Viajar">
+										<td>
+											<button class="btn btn-success">Pagar en línea</button>
+										</td>
+										<td>
+											<button class="btn btn-danger">PDF</button>
+										</td>
+										<td>
+											<div class="media">
+												<a href="#" class="pull-left">
+													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+												</a>
+												<div class="media-body">
+													<span class="media-meta pull-right">08/1/2018</span>
+													<h4 class="title">
+														800340249-3
+														<span class="pull-right Viajar">(Viajar)</span>
+													</h4>
+													<p class="summary"></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</div>
+	<div class="row col-sm-12 myclaims">
+			<h3>Información de Siniestros</h3>
+		<section class="content panel">
+			<table class="table table-striped table-bordered table-hover dataTables-example">
+				<thead>
+				    <tr>
+				        <th>RUT</th>
+				        <th>Empresa</th>
+				        <th>Nº de Siniestro</th>
+				        <th>Nª Contrato</th>
+				        <th>Fecha Solicitud</th>
+				    </tr>
+				</thead>
+				<tbody>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>BCI Seguros</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>Liberty</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>Mapre</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>HDI Seguros</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>Chilean Consolidated</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>BCI Seguros</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>Zenit Seguros</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>Seguros SURA</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>Seguros SURA</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>Seguros SURA</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				    <tr class="gradeA">
+				        <td>800340249-3</td>
+				        <td>BCI Seguros</td>
+				        <td>endor-1</td>
+				        <td class="center">231</td>
+				        <td class="center">2017.11.29</td>
+				    </tr>
+				</tbody>
+				<tfoot>
+				    <tr>
+				        <th>RUT</th>
+				        <th>Empresa</th>
+				        <th>Nº de Siniestro</th>
+				        <th>Nª Contrato</th>
+				        <th>Fecha Solicitud</th>
+				    </tr>
+				</tfoot>
+			</table>
+		</section>
+	</div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <div class="container" style="background-color: #24bad9; padding-top: 10px;">
+        <span class="sidenav-heading">Home</span>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    </div>
+    <li class="upper-links myins"><a class="links" href="#"><i class="fa fa-shield"></i>&nbsp&nbspTus Seguros</a></li>
+	<li class="upper-links myclaim"><a class="links" href="#"><i class="fa fa-file-o"></i>&nbsp&nbspInformación de Siniestros</li>
+	<li class="upper-links"><a class="links" href="/oncustomer/index"><i class="fa fa-sign-out"></i>Cerrar sesión</a></li>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/dataTables/datatables.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+	    var table = $('.dataTables-example').DataTable({
+	        pageLength: 25,
+	        responsive: true,
+	        dom: '<"html5buttons"B>lTfgitp',
+	        buttons: [   
+	        ]
+	    });
+
+
+	    $('#DataTables_Table_0_filter label').html('<label>Buscar:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0"></label>');
+
+	    $('.dataTables_filter input').on( 'keyup', function () {
+	        table.search( this.value ).draw();
+	    } );
+
+	    $('.myinsurance').css('display', 'none');
+    	$('.myclaims').css('display', 'none');
+
+	});
+	function openNav() {
+	    document.getElementById("mySidenav").style.width = "70%";
+	    // document.getElementById("flipkart-navbar").style.width = "50%";
+	    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
+
+	function closeNav() {
+	    document.getElementById("mySidenav").style.width = "0";
+	    document.body.style.backgroundColor = "rgba(0,0,0,0)";
+	}
+
+	$('.star').on('click', function () {
+      $(this).toggleClass('star-checked');
+    });
+
+    $('.ckbox label').on('click', function () {
+      $(this).parents('tr').toggleClass('selected');
+    });
+
+    $('.btn-filter').on('click', function () {
+      var $target = $(this).data('target');
+      if ($target != 'all') {
+        $('.table-filter tr').css('display', 'none');
+        $('.table-filter tr[data-status="' + $target + '"]').fadeIn('slow');
+      } else {
+        $('.table-filter tr').css('display', 'none').fadeIn('slow');
+      }
+    });
+
+    $('.myins').on('click', function() {
+    	// body...
+    	$('.myinsurance').css('display', 'block');
+    	$('.myclaims').css('display', 'none');
+    	$('.jumbotron').css('display', 'none');
+    })
+
+    $('.myclaim').on('click', function() {
+    	$('.myinsurance').css('display', 'none');
+    	$('.myclaims').css('display','show');
+    	$('.jumbotron').css('display', 'none');
+    });
+</script>

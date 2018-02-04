@@ -1,0 +1,232 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- <link href="/css/main.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="/css/rangeslider.css"> <!-- Resource style -->
+<link rel="stylesheet" href="/css/filter.css"> <!-- Resource style -->
+<link href="/css/responsive.css" rel="stylesheet">
+<!-- Font Awesome --> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- core CSS -->
+<script src="/js/filter/modernizr.js"></script>
+<style type="text/css">
+</style>
+<main class="cd-main-content">
+    <section class="cd-gallery">
+        <ul>
+            <li class="mix color-1 check1 radio2 option3">
+                <div class="container">
+                    <div class="li_content detail-item col-xs-12 col-md-9 col-sm-9 col-lg-9">
+                        <div class="logos col-md-3 col-sm-3 col-lg-3">
+                            <div class="img_logo">
+                                <img src="/images/partners/logo4.png" alt="Image 1">
+                            </div>
+                        </div>
+                        <div class="detail-item col-md-9 col-sm-9 col-lg-9">
+                            <div class="bold">BCI Seguros</div>
+                            <br>
+                            <div class="briefdesc">
+                            <span>Responsabilidad Civil General:</span>UF 3.500 sin deducible<br>
+                            <span>Responsabilidad Civil Vehicular:</span>
+                            UF 3.500  Deducible UF 300<br>
+                            <span>Desde $6.698:</span>Mensual | 0,25 UF mensual
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buyquote col-xs-12 col-md-3 col-sm-3 col-lg-3">
+                        <br>
+                        <br>
+                        <div>
+                                <button type="submit" class="btn btn-success btn-lg contact" id="load" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Espere a redirigir" style="width: 100%;">
+                                    <span class="glyphicon glyphicon-shopping-cart pull-left"></span> Plan 3500
+                                </button>
+                        </div>
+                    </div>
+                </div> 
+            </li>
+            <li class="mix color-1 check1 radio2 option3">
+                <div class="container">
+                    <div class="li_content detail-item col-xs-12 col-md-9 col-sm-9 col-lg-9">
+                        <div class="logos col-md-3 col-sm-3 col-lg-3">
+                            <div class="img_logo">
+                                <img src="/images/partners/logo4.png" alt="Image 1">
+                            </div>
+                        </div>
+                        <div class="detail-item col-md-9 col-sm-9 col-lg-9">
+                            <div class="bold">BCI Seguros</div>
+                            <br>
+                            <div class="briefdesc">
+                            <span>Responsabilidad Civil General:</span>UF 5.000 sin deducible<br>
+                            <span>Responsabilidad Civil Vehicular:</span>
+                            UF 5.000  Deducible UF 300<br>
+                            <span>Desde $10.181:</span>Mensual | 0,38 UF mensual
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buyquote col-xs-12 col-md-3 col-sm-3 col-lg-3">
+                        <br>
+                        <br>
+                        <div>
+                                <button type="submit" class="btn btn-success btn-lg contact" id="load" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Espere a redirigir" style="width: 100%;">
+                                    <span class="glyphicon glyphicon-shopping-cart pull-left"></span> Plan 5000
+                                </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="gap"></li>
+            <li class="gap"></li>
+            <li class="gap"></li>
+        </ul>
+        <div class="cd-fail-message">No se han encontrado resultados</div>
+    </section> <!-- cd-gallery -->
+
+    <div class="cd-filter">
+        <form>
+            <div class="cd-filter-block">
+                <h4>Precio</h4>
+                
+                <div class="cd-filter-content price-slider">
+                <span class="h4" id="amount-label"><span class="pricing__dollar">$</span>60</span>
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <input id="range-slider" type="range" min="0" max="200" step="5" value="0">
+                        </div>
+                    </div>
+                </div> <!-- cd-filter-content -->
+            </div> <!-- cd-filter-block -->
+
+            <div class="cd-filter-block">
+                <h4>Buscar</h4>
+                
+                <div class="cd-filter-content">
+                    <input type="search" placeholder="Try Company">
+                </div> <!-- cd-filter-content -->
+            </div> <!-- cd-filter-block -->
+
+            <div class="cd-filter-block">
+                <h4>Seleccionar empresas</h4>
+
+                <ul class="cd-filter-content cd-filters list">
+                    <li>
+                        <input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
+                        <label class="checkbox-label" for="checkbox1">MAPFRE</label>
+                    </li>
+
+                    <li>
+                        <input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
+                        <label class="checkbox-label" for="checkbox2">Sura</label>
+                    </li>
+
+                    <li>
+                        <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+                        <label class="checkbox-label" for="checkbox3">Zenit</label>
+                    </li>
+                </ul> <!-- cd-filter-content -->
+            </div> <!-- cd-filter-block -->
+
+
+            <div class="cd-filter-block">
+                <h4>Deducible</h4>
+
+                <ul class="cd-filter-content cd-filters list">
+
+                    <li>
+                        <input class="filter" data-filter=".check4" type="checkbox" id="checkbox4">
+                        <label class="checkbox-label" for="checkbox4">0 UF</label>
+                    </li>
+                    <li>
+                        <input class="filter" data-filter=".check5" type="checkbox" id="checkbox5">
+                        <label class="checkbox-label" for="checkbox5">3 UF</label>
+                    </li>
+
+                    <li>
+                        <input class="filter" data-filter=".check6" type="checkbox" id="checkbox6">
+                        <label class="checkbox-label" for="checkbox6">5 UF</label>
+                    </li>
+
+                    <li>
+                        <input class="filter" data-filter=".check7" type="checkbox" id="checkbox7">
+                        <label class="checkbox-label" for="checkbox7">10 UF</label>
+                    </li>
+                </ul> <!-- cd-filter-content -->
+            </div> <!-- cd-filter-block -->
+        </form>
+
+        <a class="cd-close">Cerca</a>
+    </div> <!-- cd-filter -->
+
+    <a class="cd-filter-trigger">Filtrar</a>
+</main> <!-- cd-main-content -->
+<script src="/js/filter/jquery-2.1.1.js"></script>
+ <script src="/js/cleave.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.prettyPhoto.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/validator.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/js/bootstrap-datetimepicker.js"></script>
+<script src="/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/es.js"></script>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+<script src="/js/filter/jquery.mixitup.min.js"></script>
+<script src="/js/filter/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/es.js"></script>
+<script type="text/javascript" src="/libs/inputautocomplete/jquery.easy-autocomplete.min.js"></script>
+<script src="/js/filter/jRate.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+    var $element = $('input[type="range"]');
+    var $handle;
+
+    $element.rangeslider({
+        polyfill: false,
+        onInit: function() {
+            $handle = $('.rangeslider__handle', this.$range);
+            updateHandle($handle[0], this.value);
+            $("#amount-label").html('<span class="pricing__dollar">$</span>' + this.value);
+        }
+    }).on('input', function() {
+        updateHandle($handle[0], this.value);
+        $("#amount-label").html('<span class="pricing__dollar">$</span>' + this.value);
+    });
+
+    function updateHandle(el, val) {
+        el.textContent = val;
+    }
+
+    var that = this;
+    
+    $('#btn-click').on('click', function() {
+        toolitup.setRating(0);              
+    });
+    
+    $('.more_information button').on('click', function(){
+        if($('.more_information span').hasClass('glyphicon-chevron-down')) {
+            $('.more_information span').removeClass('glyphicon-chevron-down');
+            $('.more_information span').addClass('glyphicon-chevron-up');
+        }else if($('.more_information span').hasClass('glyphicon-chevron-up')) {
+            $('.more_information span').removeClass('glyphicon-chevron-up');
+            $('.more_information span').addClass('glyphicon-chevron-down');
+        }
+    });
+
+    $('.filter').on('click', function() {
+        // alert('ccc');
+        $(this).siblings().find('a').removeClass('selected');
+        $(this).find('a').addClass('selected');
+    });
+
+    $('.selectpicker').selectpicker();
+
+    $('.contact').on('click', function() {
+        // var company = $(this).parent().parent().parent().find(".bold").html();
+        // var logo = $(this).parent().parent().parent().find(".img_logo img").attr('src');
+        location.href = "/payment/rcp"; 
+    });
+
+});
+</script>
